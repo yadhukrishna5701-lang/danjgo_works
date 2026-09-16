@@ -1,0 +1,140 @@
+PORTFOLIO APPLICATION API DOCUMENTATION
+Base URL: https://api.yourdomain.com/v1
+=========================================================
+
+1. ABOUT
+Retrieves personal information, bio, and contact details for the portfolio owner.
+
+* URL: /about/
+* Method: GET
+* Auth Required: No
+* Success Response:
+  - Code: 200 OK
+  - Content:
+{
+  "id": 1,
+  "full_name": "Your Name",
+  "title": "Software Developer & Educator",
+  "bio": "A passionate developer and researcher building scalable applications...",
+  "email": "hello@yourdomain.com",
+  "github_url": "https://github.com/yourusername",
+  "linkedin_url": "https://linkedin.com/in/yourusername",
+  "resume_download_url": "https://api.yourdomain.com/media/resume.pdf"
+}
+
+---------------------------------------------------------
+2. EDUCATION
+Retrieves the academic background and qualifications.
+
+* URL: /education/
+* Method: GET
+* Auth Required: No
+* Success Response:
+  - Code: 200 OK
+  - Content:
+[
+  {
+    "id": 1,
+    "institution": "University Name",
+    "degree": "Academic Degree",
+    "start_date": "2018-08-01",
+    "end_date": "2022-05-01",
+    "grade_or_cgpa": "8.5",
+    "description": "Focused on software engineering and data structures."
+  }
+]
+
+---------------------------------------------------------
+3. PROJECTS
+Retrieves a list of technical projects. Supports pagination.
+
+* URL: /projects/
+* Method: GET
+* Auth Required: No
+* Success Response:
+  - Code: 200 OK
+  - Content:
+[
+  {
+    "id": 1,
+    "title": "DietLense",
+    "short_description": "AI-powered food recognition and nutritional analysis app.",
+    "long_description": "Built using Gemini models to analyze nutritional data from images...",
+    "technologies_used": ["Python", "Django", "Google GenAI SDK"],
+    "live_url": "https://dietlense.example.com",
+    "github_url": "https://github.com/yourusername/dietlense",
+    "image_url": "https://api.yourdomain.com/media/projects/dietlense_cover.jpg",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Interview Prep Blog",
+    "short_description": "Educational application for programming interviews.",
+    "long_description": "A platform for practicing technical interview questions and Python concepts.",
+    "technologies_used": ["Python", "Django REST Framework", "JavaScript"],
+    "live_url": "https://prep.example.com",
+    "github_url": "https://github.com/yourusername/interview-prep",
+    "image_url": "https://api.yourdomain.com/media/projects/prep_cover.jpg",
+    "featured": false
+  }
+]
+
+---------------------------------------------------------
+4. SKILLS
+Retrieves a categorized list of technical and professional skills.
+
+* URL: /skills/
+* Method: GET
+* Auth Required: No
+* Success Response:
+  - Code: 200 OK
+  - Content:
+[
+  {
+    "id": 1,
+    "category": "Backend",
+    "name": "Django REST Framework",
+    "proficiency_percentage": 90,
+    "icon_url": "https://api.yourdomain.com/media/icons/drf.png"
+  },
+  {
+    "id": 2,
+    "category": "Languages",
+    "name": "Python",
+    "proficiency_percentage": 95,
+    "icon_url": null
+  },
+  {
+    "id": 3,
+    "category": "Frontend",
+    "name": "JavaScript",
+    "proficiency_percentage": 85,
+    "icon_url": "https://api.yourdomain.com/media/icons/js.png"
+  }
+]
+
+---------------------------------------------------------
+5. CERTIFICATIONS
+Retrieves a list of professional certificates and course completions.
+
+* URL: /certifications/
+* Method: GET
+* Auth Required: No
+* Success Response:
+  - Code: 200 OK
+  - Content:
+[
+  {
+    "id": 1,
+    "name": "Advanced Python & Django Specialization",
+    "issuing_organization": "Tech Institute",
+    "issue_date": "2024-01-15",
+    "expiration_date": null,
+    "credential_id": "CERT-12345",
+    "credential_url": "https://certificates.example.com/12345"
+  }
+]
+
+=========================================================
+Admin Note:
+For the administrative dashboard, implement POST, PUT, PATCH, and DELETE methods for these URLs. Ensure these administrative endpoints are protected, requiring an Authorization header (e.g., Authorization: Bearer <token>) to perform CRUD operations on the portfolio data.

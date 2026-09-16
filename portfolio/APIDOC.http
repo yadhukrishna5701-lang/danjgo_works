@@ -1,0 +1,32 @@
+# line comment
+# api call structure
+# http_method_name url
+# accept|contend-type:application/json
+# authorization:username password
+
+# request body {}
+
+# apicall for about details
+###
+GET http://127.0.0.1:8000/about/
+Accept: application/json
+
+# apicall for education details
+###
+GET http://127.0.0.1:8000/education/
+Accept: application/json
+
+#apicall for project details
+###
+GET http://127.0.0.1:8000/projects/
+Accept: application/json
+
+#apicall for skills detail
+###
+GET http://127.0.0.1:8000/skills/
+Accept: application/json
+
+#apicall for certification detail
+###
+GET http://127.0.0.1:8000/certification/
+Accept: application/json
