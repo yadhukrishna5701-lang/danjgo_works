@@ -1,0 +1,7 @@
+GET localhost:8000/hello/
+
+GET localhost:8000/morning/
+
+GET localhost:8000/afternoon/
+
+GET localhost:8000/evening/
