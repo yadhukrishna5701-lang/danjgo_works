@@ -1,0 +1,27 @@
+#api cal for list book
+###
+GET http://127.0.0.1:8000/book/
+Accept: application/json
+
+#api cal for book creation
+###
+POST http://127.0.0.1:8000/book/
+Content-Type: application/json
+
+{
+    "title":"harry potter",
+    "author":"jk rowling",
+    "price":400,
+    "pages":200,
+    "publication":"bloomsburry"
+}
+
+#api cal for retrieve book details
+###
+GET http://127.0.0.1:8000/book/1/
+Accept: application/json
+
+#api cal for delete book
+###
+DELETE http://127.0.0.1:8000/book/1/
+Accept: application/json

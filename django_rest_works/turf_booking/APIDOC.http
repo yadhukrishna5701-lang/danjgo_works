@@ -1,0 +1,106 @@
+#api cal for create superuser
+###
+POST http://127.0.0.1:8000/v2/admin-user/
+Content-Type: application/json
+
+{
+    "username":"superuser",
+    "email":"superuser123@gmail.com",
+    "password":"superuser"
+}
+
+#api cal for list
+###
+GET http://127.0.0.1:8000/v2/turf/
+Accept: application/json
+Authorization: Basic superuser:superuser
+#api cal for create
+###
+POST http://127.0.0.1:8000/v2/turf/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+{
+    "name":"abhi",
+    "location":"palakkad",
+    "phone":1234567822,
+    "fee":1200
+}
+
+#api cal for details
+###
+GET http://127.0.0.1:8000/v2/turf/3/
+Accept: application/json
+Authorization: Basic superuser:superuser
+#api cal for update
+###
+PUT http://127.0.0.1:8000/v2/turf/3/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+{
+    "name":"abhinav",
+    "location":"palakkad",
+    "phone":1234567822,
+    "fee":1500
+}
+
+#api cal for delete
+###
+DELETE http://127.0.0.1:8000/v2/turf/3/
+Accept: application/json
+Authorization: Basic superuser:superuser
+
+
+
+
+#api cal for list
+###
+GET http://127.0.0.1:8000/booking/
+Accept: application/json
+
+#api cal for create
+###
+POST http://127.0.0.1:8000/booking/
+Content-Type: application/json
+
+{
+    "team_name":"bad boys",
+    "phone":"1234567891",
+    "email":"newstars@gmail.com",
+    "turf":2,
+    "date":"2026-10-9",
+    "time":"8:00",
+    "duration":2
+}
+
+
+#api cal for signup
+###
+POST http://127.0.0.1:8000/v2/register/signup/
+Content-Type: application/json
+
+{
+    "username":"user123",
+    "email":"user@gmail.com",
+    "password":"user@123"
+}
+
+#api cal for list
+###
+GET http://127.0.0.1:8000/v2/register/booking/
+Accept: application/json
+
+#api cal for list
+###
+POST http://127.0.0.1:8000/v2/register/booking/
+Content-Type: application/json
+
+{
+    "team_name":"bad boys",
+    "phone":"1234567895",
+    "email":"newstars@gmail.com",
+    "turf":2,
+    "date":"2026-10-9",
+    "time":"8:00",
+    "duration":2,
+    "end_time":"10:00"
+}

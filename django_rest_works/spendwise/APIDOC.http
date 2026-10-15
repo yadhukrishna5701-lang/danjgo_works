@@ -1,0 +1,89 @@
+#api for create user
+###
+POST http://127.0.0.1:8000/v1/spending/register/ 
+Content-Type: application/json
+
+{
+    "username":"user07",
+    "email":"django@gmail.com",
+    "password":"password@123"
+}
+
+
+#api cal for token
+###
+POST http://127.0.0.1:8000/v1/spending/token/ 
+Content-Type: application/json
+
+{
+    "username":"user07",
+    "password":"password@123"
+}
+
+
+#api cal for user detail
+###
+GET http://127.0.0.1:8000/v1/spending/me/
+Accept: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2
+
+#api cal for list expenses
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/ 
+Accept: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2
+
+#api cal for create expenses
+###
+POST http://127.0.0.1:8000/v1/spending/expenses/ 
+Content-Type: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2
+
+{
+    "title":"dinner",
+    "amount":750,
+    "category":"FOOD",
+    "payment_method":"cash"
+}
+
+#api cal for retrive expenses
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/1/ 
+Accept: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2 
+
+#api cal for update
+###
+PUT http://127.0.0.1:8000/v1/spending/expenses/1/
+Content-Type: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2
+
+{
+  "id": 2,
+  "title": "school fee",
+  "amount": "7000.00",
+  "category": "BILLS",
+  "priority": "need",
+  "payment_method": "upi",
+  "created_at": "2026-10-09T06:09:48.420407Z",
+  "updated_at": "2026-10-09T06:09:48.420427Z",
+  "owner": 2
+}
+
+#api cal for delete
+###
+DELETE http://127.0.0.1:8000/v1/spending/expenses/2/
+Accept: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2
+
+#api cal for summary
+###
+GET http://127.0.0.1:8000/v1/spending/summary/ 
+Accept: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2
+
+#api cal for budget plan
+###
+GET http://127.0.0.1:8000/v1/spending/budget/ 
+Accept: application/json
+Authorization: Token aa4fc18726f2dcfbdbffc3ae1d6463fdafbbcaf2

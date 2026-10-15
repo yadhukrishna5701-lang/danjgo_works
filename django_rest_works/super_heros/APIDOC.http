@@ -1,0 +1,63 @@
+#api cal for list
+###
+GET http://127.0.0.1:8000/powers/
+Accept: application/json
+
+#api cal for create
+###
+POST http://127.0.0.1:8000/powers/
+Content-Type: application/json
+
+{
+    "name":"ironman",
+    "powers":"fly",
+    "category":"technology",
+    "weakness":"depends on technology",
+    "universe":"marvel"
+}
+
+#api cal for retrieve
+###
+GET http://127.0.0.1:8000/powers/2/
+Accept: application/json
+
+#api cal for update
+###
+PUT http://127.0.0.1:8000/powers/2/
+Content-Type: application/json
+
+{
+   "name":"minnalmurli",
+    "powers":"fly",
+    "category":"moolywood",
+    "weakness":"emotions",
+    "universe":"bcu" 
+}
+
+#api cal for delete
+###
+DELETE http://127.0.0.1:8000/powers/2/
+Accept: application/json
+
+#api cal for list serializer
+###
+GET http://127.0.0.1:8000/v2/powers/
+Accept: application/json
+
+#api cal for create serializer
+###
+POST http://127.0.0.1:8000/v2/powers/
+Content-Type: application/json
+
+{
+    "name": "hulk",
+    "powers": "superstrength",
+    "category": "mutant",
+    "weakness": "over angrey",
+    "universe": "marvel"
+}
+
+#api cal for retrieve serializer
+###
+GET http://127.0.0.1:8000/v2/powers/6/
+Accept: application/json

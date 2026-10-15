@@ -1,0 +1,38 @@
+GET http://127.0.0.1:8000/employee/
+Accept: application/json
+
+#apicall for adding new employee
+###
+POST http://127.0.0.1:8000/employee/
+Content-Type: application/json
+
+{
+    "name":"yadhu",
+    "department":"sales",
+    "salary":50000,
+    "location":"palakkad",
+    "email":"yadhu123@gmail.com"
+}
+
+#api call for retrieve details
+###
+GET http://127.0.0.1:8000/employee/1/
+Accept: application/json
+
+#api call for delete
+###
+DELETE http://127.0.0.1:8000/employee/1/
+Accept: application/json
+
+#api cal for update details
+###
+PUT http://127.0.0.1:8000/employee/2/
+Accept: application/json
+
+{
+    "name":"yadhu",
+    "department":"hr",
+    "salary":65000,
+    "location":"palakkad",
+    "email":"yadhu123@gmail.com"
+}

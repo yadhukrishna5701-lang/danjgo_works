@@ -1,0 +1,178 @@
+#api cal for list doctors
+###
+GET http://127.0.0.1:8000/doctors/
+Accept: application/json
+
+#api cal for create doctor
+###
+POST http://127.0.0.1:8000/doctors/
+Content-Type: application/json
+
+{
+    "name":"unnikuttan",
+    "specialization":"psychiatry",
+    "fee":300,
+    "qualification":"mbbs",
+    "email":"unnikuttan123@gmail.com"
+}
+
+#api cal for retrieve doctor
+###
+GET http://127.0.0.1:8000/doctors/2/
+Accept: application/json
+
+#api cal for updating
+###
+PUT http://127.0.0.1:8000/doctors/2/
+Content-Type: application/json
+
+{
+    "name":"yadhu",
+    "specialization":"psychiatry",
+    "fee":350,
+    "qualification":"mbbs",
+    "email":"yadhu123@gmail.com"  
+}
+
+#api cal for delete
+###
+DELETE http://127.0.0.1:8000/doctors/2/
+Accept: application/json
+
+#api cal for list using seralizer
+###
+GET http://127.0.0.1:8000/v2/doctors/
+Accept: application/json
+Authorization: Basic superuser:superuser
+#api cal for create serializzer
+###
+POST http://127.0.0.1:8000/v2/doctors/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+
+{
+    "name":"abhi",
+    "specialization":"psychiatry",
+    "fee":350,
+    "qualification":"mbbs",
+    "email":"abhinav123@gmail.com"
+}
+
+#api cal for retrieve
+###
+GET http://127.0.0.1:8000/v2/doctors/4/
+Accept: application/json
+Authorization: Basic superuser:superuser
+#api cal for update
+###
+PUT http://127.0.0.1:8000/v2/doctors/4/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+
+{
+  "name": "yadhu",
+  "specialization": "psychiatry",
+  "fee": 350,
+  "qualification": "mbbs",
+  "email": "yadhuk123@gmail.com"
+}
+
+#api cal for delete
+###
+DELETE http://127.0.0.1:8000/v2/doctors/5/
+Accept: application/json
+Authorization: Basic superuser:superuser
+#api cal for user creation
+###
+POST http://127.0.0.1:8000/v2/admin-user/
+Content-Type: application/json
+
+{
+    "username":"superuser",
+    "email":"superuser123@gmail.com",
+    "password":"superuser"
+}
+
+
+
+
+#api cal for list appointments
+###
+GET http://127.0.0.1:8000/appointments/
+Accept: application/json
+
+#api cal for create appointment 
+###
+POST http://127.0.0.1:8000/appointments/
+Content-Type: application/json
+
+{
+    "patient_name":"hari",
+    "phone":5665777,
+    "doctor":3,
+    "appointment_date":"2026-10-6",
+    "problem":"weezing"
+}
+
+
+#booking v2 
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+    "username":"user77",
+    "email":"django@gmail.com",
+    "password":"password@123"
+}
+
+#api cal for list views
+###
+GET http://127.0.0.1:8000/v2/booking/appointment/
+Accept: application/json
+Authorization: Basic user77:password@123
+
+#api cal for create
+###
+POST http://127.0.0.1:8000/v2/booking/appointment/
+Content-Type: application/json
+Authorization: Basic user77:password@123
+
+{
+    "patient_name":"jerry",
+    "phone":5665766,
+    "doctor":4,
+    "appointment_date":"2026-10-8",
+    "problem":"weezing"
+}
+
+#api cal for retrieve
+###
+GET http://127.0.0.1:8000/v2/booking/appointment/1/
+Accept: application/json
+Authorization: Basic user77:password@123
+
+
+#api cal for update
+###
+PUT  http://127.0.0.1:8000/v2/booking/appointment/1/
+Content-Type: application/json
+Authorization: Basic user77:password@123
+
+{
+  "id": 1,
+  "patient_name": "sasi",
+  "phone": "5665777",
+  "appointment_date": "2026-10-09",
+  "token_number": 1,
+  "appointment_time": null,
+  "problem": "weezing",
+  "created_at": "2026-10-04T15:25:49.922636Z",
+  "doctor": 1
+}
+
+#api cal for delete
+###
+DELETE http://127.0.0.1:8000/v2/booking/appointment/2/
+Accept: application/json
+Authorization: Basic user77:password@123
